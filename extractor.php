@@ -9,7 +9,7 @@ for ($i = 0; $i < $zip->numFiles; $i++) {
     $content = $zip->getFromName($filename);
     
     $bins = explode(' ', $content);
-    foreach($bins as $bin){
+    foreach($bins as $bin) {
         $message .= mb_chr(bindec($bin));
     }
 }
